@@ -1,111 +1,121 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,400&display=swap');
+
+* {
     margin: 0;
     padding: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{    
+body {    
     background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
 }
 
-.box{
-    color: #fff;
+.box {
     background-color: rgba(0,0,0,0.8);
-    position: absolute;
-    width: 28%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    padding: 10px;  
-          
+    max-width: 300px;
+    min-height: 40vh;
+    padding: 1rem;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    border-radius: 10px;       
 }
 
-fieldset{
-    border: 3px solid dodgerblue;
-    border-radius: 10px;
-    margin: 5px;  
-    padding: 5px;
-    overflow: hidden;  
+fieldset {
+    display: flex;
+    flex-direction: column; 
 }
 
-legend{
-    border: 1px solid dodgerblue;
-    font-weight: bold;
-    padding: 10px;
+legend {
+    color: #fff;
+    margin-bottom: 1rem;
     text-align: center;
-    background-color: dodgerblue;
-    border-radius: 5px;
-}
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-bottom : 1px solid dodgerblue;
+} 
 
-.inputBox{
+.inputBox {
     position: relative;
-    margin: 10px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.842);
 }
 
-.inputUser{
+.inputBox label {
+    margin-left: 10px;
+}
+
+.inputUser {
+    color: rgba(255, 255, 255, 0.842);
+    min-width: 100%;
     background: none;
     border: none;
+    pointer-events: none;
     border-bottom: 1px solid #fff;
+    cursor: pointer;
     outline: none;
-    color: #fff;
-    font-size: 15px;
-    width: 100%;
-    margin: 10px;
-    margin-left: 0px;
-    letter-spacing: 2px;    
+    letter-spacing: 2px;
+    caret-color: dodgerblue;
 }
 
-.labelInput{
+.labelInput {
     position: absolute;
-    top: 0px;
+    margin-top: 0px;
     left: 0px;
-    pointer-events: none;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .inputUser:focus ~ .labelInput,
-.inputUser:valid ~ .labelInput{
-    top: -12px;
+.inputUser:valid ~ .labelInput {
+    top: -10px;
     font-size: 12px;
     color: dodgerblue;
 }
 
-.escolha{
-    margin: 5px;
-    
+#genero {
+    color: rgba(255, 255, 255, 0.842);
+    padding: 8px;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-#genero{
-    margin: 10px;
-    padding: 10px;
+p {
+    color: rgba(255, 255, 255, 0.842);
+    text-align: center;
+    margin-bottom: 0;
 }
 
-#submit{
-    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
-    color: #fff;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 10px;
-    margin: 5px;
-    margin-left: 0px;
-    width: 100%;
-    border-radius: 10px;
-    border: none; 
-    cursor: pointer;
+.escolha {
+    color: rgba(255, 255, 255, 0.842);
+    margin-left: 20px;
 }
 
-#submit:hover {
-    color: rgb(0, 0, 2);
-    border: 1px solid #fff;
-}
-
-.inputBox #nascimento{
+.inputBox #nascimento {
+    width: 120px;
     border: none;
-    padding: 6px;
-    margin: 5px;
-    border-radius: 10px;
-    outline: none;
-    font-size: 15px;
+    margin-left: 8px;
+    padding: 3px;
+    border-radius: 5px;  
+    outline: none;  
 }
+
+input[type="submit"] {
+    background-image: linear-gradient(to right, rgb(17, 54, 71), rgb(20, 147, 220));
+    margin-top: 0.5rem;
+    padding: 0.4rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 5px;
+    border: none;
+}
+
